@@ -195,7 +195,7 @@
 									</div>
 									<div class="row">
 										<div style="text-align: center; margin-top: 20px">
-											<input type="submit" class="tiny button radius" value="Add Entry">
+											<input type="submit" class="tiny button radius" value="Edit Entry">
 										</div>
 								    </div>
 								</form>

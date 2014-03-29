@@ -73,7 +73,7 @@
 						<legend><h4>Theses under this adviser</h4></legend>
 						<div style="margin-bottom: 20px">
 							<h4 style="color: #008CBA;"><?= $faculty_details['fac_lname'].', '.$faculty_details['fac_fname']; ?></h4>
-							<h6 style="font-style: italic"><?= $faculty_details['dep_name']; ?></h6>
+							<h6 style="font-style: italic"><a href="department.php?id=<?= $faculty_details['department_id']; ?>"><?= $faculty_details['dep_name']; ?></a></h6>
 						</div>
 						<table style="width: 100%">
 				    		<thead>

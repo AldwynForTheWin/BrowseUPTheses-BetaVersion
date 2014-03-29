@@ -133,8 +133,10 @@
 														</div>
 													</div>
 												</div>
-												<a class="tiny button radius block" href="app/removeFaculty.php?id=<?= $faculty['faculty_id']; ?>&name=<?= (isset($faculty['full_name'])) ? $faculty['full_name'] : $faculty['fac_username']; ?>"
-												style="margin-top: 15px">Yes</a>
+												<form action="print.php" method="POST">
+													<input type="hidden" name="faculty_id[<?= $faculty['faculty_id']; ?>]" value="<?= $faculty['faculty_id']; ?>"/>
+													<input type="submit" class="tiny button radius block" style="margin-top: 15px" value="Yes"/>
+												</form>
 												<a class="close-reveal-modal">&times;</a>
 											</div>
 											<td style="text-align: center">

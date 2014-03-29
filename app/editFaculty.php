@@ -12,7 +12,8 @@
 	$department_id = $_POST['department'];
 	$gender = $_POST['gender'];
 
-	$faculty_login = mysql_query("SELECT * FROM faculty WHERE faculty_id = '$faculty_id'");
+	// $faculty_login = mysql_query("SELECT * FROM faculty WHERE faculty_id = '$faculty_id'");
+
 	if ($password == $confirm) {
 		$faculty_profiles = mysql_query("SELECT * FROM faculty_profiles WHERE faculty_id = '$faculty_id'");
         if (mysql_num_rows($faculty_profiles) == 1) {
@@ -32,7 +33,7 @@
         $_SESSION['alert'] = 'Your profile has been edited.';
         header('location: ../faculty.php?id='.$faculty_id);
 	} else {
-        $_SESSION['alert'] = 'Incorrect password.';
+        $_SESSION['alert'] = 'Passwords do not match.';
         header('location: ../setProfile.php');
     }
 

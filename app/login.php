@@ -22,7 +22,7 @@
 			$_SESSION['user_id'] = 'a_'.$admin['admin_username'];
 			header('location: ../admin.php');
 		} else {
-			$_SESSION['error'] = 0;
+			$_SESSION['alert'] = 'You hav entered an incorrect username or password.';
 			header('location: ../login.php');
 		}
 	}

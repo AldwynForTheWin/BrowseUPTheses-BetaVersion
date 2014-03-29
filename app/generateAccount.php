@@ -8,7 +8,8 @@
   }
 
   $quantity = $_POST['quantity'];
-  echo "quantity: " . $quantity;
+  $origQuantity = $quantity;
+
   while ($quantity != 0) {
     $temp_id = mysql_query("SELECT * FROM  faculty WHERE faculty_id = (SELECT MAX(faculty_id)  FROM faculty)");
     $temp2_id = mysql_fetch_assoc($temp_id);
@@ -18,6 +19,7 @@
     VALUES ('$faculty_username', '$faculty_pw')");
     $quantity--;
   } 
+  $_SESSION['alert'] = ($origQuantity > 1) ? 'You have added ' . $origQuantity . ' new faculty accounts.' : 'You have added a new faculty account';
   header('location: ../admin.php');
 
   function generatePassword() {

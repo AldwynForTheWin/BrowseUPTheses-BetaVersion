@@ -2,9 +2,6 @@
 	session_start();
 	include('app/connectToServer.php');
 
-	$faculty = mysql_query("SELECT department_id FROM faculty_profiles WHERE faculty_id = " . explode('_', $_SESSION['user_id'])[1]);
-	$faculty = mysql_fetch_assoc($faculty);
-
 	$department_id = (isset($_GET['id'])) ? $_GET['id'] : $faculty['department_id'];
 
 	$department_details = mysql_query("SELECT * FROM department WHERE department_id = '$department_id'");

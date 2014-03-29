@@ -2,6 +2,17 @@
 	session_start();
 	include('app/connectToServer.php');
 
+	$user = explode('_', $_SESSION['user_id']);
+	if (isset($_SESSION['user_id'])) {
+		$checkAuth = $user[0];
+		if ($checkAuth == 'a') {
+			$_SESSION['alert'] = 'You have not authorization to access this page.';
+			header('location: login.php');
+		}
+	} else {
+		header('location: facultyWorks.php?id=' . $_GET['id']);
+	}
+
 	$faculty_id = explode('_', $_SESSION['user_id'])[1];
 	
 	$faculty = mysql_query("SELECT * FROM faculty WHERE faculty_id = '$faculty_id'");
@@ -37,6 +48,13 @@
 						<div class="large-12 medium-10 small-10 columns">
 							<fieldset id = "profile">
 						    	<legend><h4>My Profile</h4></legend>
+						    	<?php if (isset($_SESSION['alert'])) { ?>
+							    	<div data-alert class="alert-box warning radius" style="background-color:#420E0E">
+									  	<?= $_SESSION['alert']?>
+										<a href="#" class="close" style="color: white">&times;</a>
+										<?php unset($_SESSION['alert']); ?>
+									</div>
+								<?php } ?>
 						    	<form id="profile" method="POST" action="app/editFaculty.php">
 						    		<div class="row">
 										<div class="small-10 columns">
@@ -121,13 +139,6 @@
 									        </div>
 									    </div>
 									</div>
-									<?php if (isset($_SESSION['alert'])) { ?>
-								    	<div data-alert class="alert-box warning radius" style="background-color:#420E0E">
-										  	<?= $_SESSION['alert']?>
-											<a href="#" class="close" style="color: white">&times;</a>
-											<?php unset($_SESSION['alert']); ?>
-										</div>
-									<?php } ?>
 									<div class="row">
 										<div style="text-align: center; margin-top: 20px">
 											<input type="submit" class="tiny button radius" value="Confirm"/>

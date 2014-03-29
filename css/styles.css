@@ -13,8 +13,13 @@ html {
 }
 
 body {
+    height: 100%;
 	margin: 0 auto;
 	font-family: 'Segoe UI Semilight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.alert-box {
+    text-align: center;
 }
 
 #main-wrapper {

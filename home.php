@@ -8,7 +8,6 @@
 		array_push($theses, $thesis['thesis_id']);
 	}
 
-	shuffle($theses);
 	$randomized = array();
 
 	$limit = (sizeof($theses) > 10) ? 10 : sizeof($theses); 

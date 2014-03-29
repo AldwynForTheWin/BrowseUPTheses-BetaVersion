@@ -11,3 +11,4 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
 <link rel="stylesheet" type="text/css" href="css/fonts.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="icon" href="images/add-tiny.png">

@@ -20,7 +20,7 @@
 					<a href="setProfile.php">Account Settings</a>
 				<?php } else { ?>
 					<a href="admin.php">Admin</a>
-					<a href="#" data-reveal-id="addTeacherModal" data-reveal>Add Teacher</a>
+					<a href="#" data-reveal-id="addTeacherModal" data-reveal>Generate Account</a>
 					<div id="addTeacherModal" class="reveal-modal tiny" data-reveal style="text-align:center">
 						<form id="row" action="app/generateAccount.php" method="POST">
 							<h4>Provide number of accounts</h4>
@@ -36,7 +36,9 @@
 				<a href="app/logout.php" class="tiny button radius">Yes</a>
 				<a class="close-reveal-modal">&times;</a>
 			</div>
-			<?php } ?>
+			<?php } else { ?>
+				<a href="login.php">Log in</a>
+			<?php }
 		?>
 	</div>
 	<style>

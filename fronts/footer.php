@@ -2,7 +2,6 @@
 	<div class="center foot row" style="margin: auto">		
 		<ul>
 			<a style="font-size: 14px; color: white;" href="#">about .</a>
-			<a style="font-size: 14px; color: white;" href="addEntry.php">admin .</a>
 			<a style="font-size: 14px; color: white;" href="#">help. </a>
 			<a style="font-size: 14px; color: white;" href="#">webmasters</a>
 		</ul>

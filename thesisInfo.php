@@ -87,6 +87,13 @@
 					<div class="row">
 						<div class="browsed-infobits large-12 medium-12 small-12 columns">
 							<h3 style="color: #008CBA; font-weight: bolder;"><?= $result['title']; ?></h3>
+							<?php if (isset($_SESSION['alert'])) { ?>
+						    	<div data-alert class="alert-box warning radius" style="background-color:#420E0E">
+								  	<?= $_SESSION['alert']?>;
+									<a href="#" class="close" style="color: white">&times;</a>
+									<?php unset($_SESSION['alert']); ?>
+								</div>
+							<?php } ?>
 							<fieldset>
 								<legend>
 									<h5>Thesis Information</h5>
