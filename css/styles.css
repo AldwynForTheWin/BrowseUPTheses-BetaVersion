@@ -17,13 +17,6 @@ body {
 	font-family: 'Segoe UI Semilight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.main_search {
-    margin: 20% auto;
-    /*background: transparent;*/
-    /*box-shadow: 0 0 100px #000;*/
-    background: -webkit-radial-gradient(#F3BD27, #1D4250);
-}
-
 #main-wrapper {
     min-height: 100%;
     padding-bottom: 87px;

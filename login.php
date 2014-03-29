@@ -26,6 +26,7 @@
 				<input type="text" placeholder="Username" name="username" style="margin-bottom: 10px" autofocus />
 				<input type="password" placeholder="Password" name="password" /><br>
 				<input type="submit" class="small button radius" value="Sign in" />
+				<a class="small button radius" href="index.php">Cancel</a>
 			</div>
 		</form>
 	</body>

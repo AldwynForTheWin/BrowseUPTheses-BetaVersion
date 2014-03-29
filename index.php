@@ -18,17 +18,20 @@
 		<title>Browse UP Theses</title>
 		<?php include('fronts/meta.php'); ?>
 	</head>
-	<body class="main_search">
-		<div id="wrap" class="container">
+	<body>
+		<div style="width: 100%; position: relative">
+			<a class="label radius" href="login.php" style="float: right; margin-top: -128px; margin-right: 10px;">Log-in</a>
+		</div>
+		<div id="wrap" class="container" style="margin-top: 10%;">
 			<div class="row" style="text-align: center">
 				<div style="font: 100px normal 'Magistral C'; text-shadow: 0 0 10px; max-width: 77%; margin: 0 auto">
-					<span style="color: #fff">browse</span><span style="color: #800000; font-size: 130%;">up</span><span style="color: #fff">theses</span><br/>
+					<span style="color: #165C08">browse</span><span style="color: #800000; font-size: 130%;">up</span><span style="color: #165C08">theses</span><br/>
 				</div>
 				<div>
 					<span style="font: 30px normal 'Magistral C'; color: #582E03">UP Cebu's Online Theses Archive</span>
 				</div>
 			</div>
-			<form action="search.php" method="GET" class="row collapse" style="margin-top: 40px;">
+			<form action="search.php" method="GET" class="row collapse" style="margin-top: 40px; padding: 20px; background-color: #bdbdbd">
 				<div class="small-2 columns">
 					<select name="category">
 						<option value="All" selected>All</option>
@@ -47,9 +50,6 @@
 					<input id="jumbo-browse" type="submit" class="postfix small button" value="Browse" />
 				</div>
 			</form>
-			<div class="row" style="margin-top: 30px">
-				<a href="login.php">Log-in</a>
-			</div>
 		</div>
 		<script>
 			function updateTypeAhead(q) {
